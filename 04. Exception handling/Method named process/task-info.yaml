@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: NumberFormatException
+    is_correct: false
+  - text: RuntimeException
+    is_correct: true
+  - text: Exception
+    is_correct: false
+  - text: It outputs nothing
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:11:22 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Method named process
+local_check: true

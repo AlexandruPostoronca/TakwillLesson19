@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: 121
+    is_correct: false
+  - text: 65
+    is_correct: false
+  - text: 652
+    is_correct: false
+  - text: 770
+    is_correct: false
+  - text: 112
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 31 May 2024 21:26:05 UTC"
+record: -1
+selected_options:
+  - 4
+custom_name: Line №
+local_check: true

@@ -1,0 +1,22 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: a
+    is_correct: false
+  - text: b
+    is_correct: true
+  - text: c
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 18:44:57 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Refactoring
+local_check: true

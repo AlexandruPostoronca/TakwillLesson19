@@ -1,0 +1,14 @@
+type: edu
+custom_name: Unknown input
+files:
+  - name: src/Util.java
+    visible: true
+    learner_created: false
+  - name: test/MainTest.java
+    visible: false
+    learner_created: false
+status: Failed
+feedback:
+  message: Cannot invoke &quot;String.length()&quot; because &quot;name&quot; is null
+  time: "Wed, 05 Jun 2024 19:17:10 UTC"
+record: -1

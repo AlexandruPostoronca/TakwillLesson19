@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: public static void method() throw Exception
+    is_correct: false
+  - text: public static void method() throws Exception
+    is_correct: true
+  - text: public static Exception method()
+    is_correct: false
+  - text: public static void method()
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:07:39 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Possible declaration
+local_check: true

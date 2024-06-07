@@ -1,0 +1,12 @@
+type: edu
+custom_name: Avoid division by zero
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Unchecked
+feedback:
+  message: "No tests have run. For more information, see <a href=\"https://plugins.jetbrains.com/plugin/10081-jetbrains-academy/docs/troubleshooting-guide.html#no_tests_have_run\"\
+    >the Troubleshooting guide</a>"
+  time: "Wed, 05 Jun 2024 19:19:03 UTC"
+record: -1

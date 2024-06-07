@@ -1,0 +1,24 @@
+type: theory
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+  - name: 19.07.01.png
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: 19.07.02.png
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: 19.07.03.jpg
+    visible: true
+    is_binary: true
+    learner_created: false
+  - name: 19.07.04.png
+    visible: true
+    is_binary: true
+    learner_created: false
+status: Solved
+record: -1
+post_submission_on_open: true

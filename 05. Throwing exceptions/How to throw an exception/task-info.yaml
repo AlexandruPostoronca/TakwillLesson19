@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: throws new Exception("msg");
+    is_correct: false
+  - text: new Exception("msg");
+    is_correct: false
+  - text: throw new Exception("msg");
+    is_correct: true
+  - text: throw Exception("msg");
+    is_correct: false
+  - text: throws Exception("msg");
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:07:36 UTC"
+record: -1
+selected_options:
+  - 2
+custom_name: How to throw an exception
+local_check: true

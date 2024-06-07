@@ -1,0 +1,31 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: 1
+    is_correct: false
+  - text: 2
+    is_correct: false
+  - text: 3
+    is_correct: true
+  - text: 4
+    is_correct: false
+  - text: 5
+    is_correct: false
+  - text: 6
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Failed
+feedback:
+  message: Incorrect solution
+  time: "Wed, 05 Jun 2024 19:07:23 UTC"
+record: -1
+selected_options:
+  - 0
+  - 1
+  - 5
+custom_name: Finding a problem
+local_check: true

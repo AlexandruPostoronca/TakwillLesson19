@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: Thread.currentThread().getStackTrace().get(0)
+    is_correct: false
+  - text: Thread.currentThread().getStackTrace().peek()
+    is_correct: false
+  - text: Thread.currentThread().getStackTrace().pop()
+    is_correct: false
+  - text: "Thread.currentThread().getStackTrace()[0]"
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 18:43:09 UTC"
+record: -1
+selected_options:
+  - 3
+custom_name: getStackTrace method
+local_check: true

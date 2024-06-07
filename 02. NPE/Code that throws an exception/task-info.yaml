@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: NullPointerException
+    is_correct: true
+  - text: NumberFormatException
+    is_correct: false
+  - text: NullReferenceException
+    is_correct: false
+  - text: StringFormatException
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 31 May 2024 21:27:18 UTC"
+record: -1
+selected_options:
+  - 0
+custom_name: Code that throws an exception
+local_check: true

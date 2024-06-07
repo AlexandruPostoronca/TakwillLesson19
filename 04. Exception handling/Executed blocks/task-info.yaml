@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: catch (RuntimeException e)
+    is_correct: true
+  - text: catch (IOException e)
+    is_correct: false
+  - text: catch (Exception e)
+    is_correct: false
+  - text: finally
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:11:15 UTC"
+record: -1
+selected_options:
+  - 0
+  - 3
+custom_name: Executed blocks
+local_check: true

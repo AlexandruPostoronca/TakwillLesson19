@@ -1,0 +1,5 @@
+content:
+  - Theory
+  - The return type of method
+  - ArrayIndexOutOfBoundsException stack trace
+  - getStackTrace method

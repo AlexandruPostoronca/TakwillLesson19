@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: three
+    is_correct: false
+  - text: two or less
+    is_correct: false
+  - text: only one
+    is_correct: false
+  - text: one and more
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 18:44:32 UTC"
+record: -1
+selected_options:
+  - 3
+custom_name: How many classes can be handled?
+local_check: true

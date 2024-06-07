@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "IOException, NullPointerException"
+    is_correct: false
+  - text: "NullPointerException, ArithmeticException"
+    is_correct: true
+  - text: "StackOverFlowError, NullPointerException"
+    is_correct: false
+  - text: "IOException, Exception"
+    is_correct: false
+  - text: "IOException, ArithmeticException"
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:15:13 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Subclasses of RuntimeException
+local_check: true

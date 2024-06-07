@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "String[]"
+    is_correct: false
+  - text: "StackTraceElement[]"
+    is_correct: true
+  - text: String
+    is_correct: false
+  - text: List&ltStackTraceElement&gt
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 18:42:53 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: The return type of method
+local_check: true

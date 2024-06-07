@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: Exception extends RuntimeException
+    is_correct: false
+  - text: IOException extends RuntimeException
+    is_correct: false
+  - text: NullPointerException extends RuntimeException
+    is_correct: true
+  - text: Exception and Throwable extend Error
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:14:01 UTC"
+record: -1
+selected_options:
+  - 2
+custom_name: Overview the hierarchy
+local_check: true

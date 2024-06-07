@@ -1,0 +1,106 @@
+<html>
+ <head></head>
+ <body>
+  <p>In this topic, you will get acquainted with an important feature that will help you with debugging your applications. That feature is called <strong>Stack Trace</strong>. It shows the call stack in the application up to the point where the stack trace message was generated. It appears as a message in your IDE when the application throws an error. We will analyze an example of such a situation, learn what a stack trace message can tell us and how to interpret it. You will also learn how to get a stack trace at any point of the program runtime when you need it.</p>
+  <div class="alert alert-primary">
+   As you may already know, the call stack is a LIFO data structure providing information about the execution order of methods. It is composed of <strong>stack frames</strong>. Each stack frame represents a single method.
+  </div>
+  <h4>Stack trace in details</h4>
+  <p>When you were learning about different types of exceptions, we also discussed different ways of throwing exceptions. Now it is time to explore the message behind them. Let's look at the following example:</p>
+  <pre><code>import java.util.Scanner;
+
+public class NumberFormatExceptionDemo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+
+        int number = Integer.parseInt(input); // an exception is possible here!
+        System.out.println(number + 1);
+    }
+}</code></pre>
+  <p>If we enter a word instead of a number, for instance, "Java," the application throws an error and shows this stack trace message:</p>
+  <pre><code>Exception in thread "main" java.lang.NumberFormatException: For input string: "Java"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at NumberFormatExceptionDemo.main(NumberFormatExceptionDemo.java:8)</code></pre>
+  <p>First, we need to read the top line, where we have three important hints:</p>
+  <ol>
+   <li>The thread in which the exception was thrown. If you remember, when the application starts, it creates a main thread.</li>
+   <li>The class responsible for the type of error. In our case, it is a <code>NumberFormatException</code> class from <code>java.lang</code> package.</li>
+   <li>A message indicating why the exception was thrown. That is, entering the string "Java." Further on, you will see how this message was generated.</li>
+  </ol>
+  <p>Now let's move on and explore the remaining four lines. The very first line from the bottom indicates line 8, which is found in the <code>main</code> method of <code>NumberFormatExceptionDemo</code> class. This is the line of the program whose execution led to the exception. The next invoked method was <code>parseInt(String s)</code> from the <code>Integer</code> class accepting one String argument. Inside this method, another overloaded <code>parseInt(String s, int radix)</code> method from the <code>Integer</code> class was invoked on line 786.</p>
+  <p><img alt="" src="19.07.01.png" width="863" style="margin: auto;"></p>
+  <div class="alert alert-primary">
+   In this topic, we are using Java 17, so the line numbers of base Java classes can vary depending on the Java version.
+  </div><br> Inside the second <code>parseInt(String s, int radix)</code> method, on line 668 the application throws an exception invoking the <code>NumberFormatException.forInputString(String s, int radix)</code> method. 
+  <p><img alt="" src="19.07.02.png" width="889" style="margin: auto;"></p>
+  <p>Finally, in the fourth line from the bottom, we can see the invocation of the <code>forInputString(String s, int radix)</code> static method from the <code>NumberFormatException</code> class. Below, on line 64, you can see the message from the stack trace example above. That is how the message from the very first line was generated.</p>
+  <p><img alt="" src="19.07.03.jpg" width="880" style="margin: auto;"></p>
+  <p>Now let's make some changes to our application. We are going to move part of the code to the method so that it will also be called when executing the application.</p>
+  <pre><code>import java.util.Scanner;
+
+public class NumberFormatExceptionDemo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+
+        demo(input);
+    }
+
+    public static void demo(String input) {
+        int number = Integer.parseInt(input); // an exception is possible here!
+        System.out.println(number + 1);
+    }
+}</code></pre>
+  <p>This time we have one more line in our stack trace, representing the execution of the <code>demo(String input)</code> method.</p>
+  <pre><code>Exception in thread "main" java.lang.NumberFormatException: For input string: "Java"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at NumberFormatExceptionDemo.demo(NumberFormatExceptionDemo.java:12)
+	at NumberFormatExceptionDemo.main(NumberFormatExceptionDemo.java:8)</code></pre>
+  <p>If you know what a <strong>call stack</strong> is, you might have already guessed that in this example you have seen some call stack methods. Basically, this stack trace message shows the call stack from the main method to the place where the exception was thrown.</p>
+  <p>The following diagram represents the call stack of the example above. Since the call stack is a LIFO data structure, the <code>main(String[] args)</code> method that was called when the application was launched is at the bottom, and it will be the last printed element of the stack trace.</p>
+  <p><img alt="" src="19.07.04.png" width="660" style="margin: auto;"></p>
+  <h4>Getting a Stack Trace on demand</h4>
+  <p>We have shown an example of getting a stack trace after your application throws an error. What if you need to get a stack trace at any specific point? It can be obtained without throwing an error by calling the <code>Thread.currentThread().getStackTrace()</code> method. This way it returns a <code>StackTraceElement</code> array, and you can print the stack trace using a loop.</p>
+  <pre><code>for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
+    System.out.println(element);
+}</code></pre>
+  <p>There are also other ways of getting a stack trace, such as calling the <code>new Throwable().getStackTrace()</code> or <code>new Throwable().printStackTrace()</code> methods. <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Throwable.html" rel="noopener noreferrer nofollow" target="_blank">Here</a> you can explore them on your own.</p>
+  <h4>StackTraceElement class: an overview</h4>
+  <p>As you may have noticed, the for loop example above prints an element of the <code>StackTraceElement</code> type. According to the official <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/StackTraceElement.html" rel="noopener noreferrer nofollow" target="_blank">Java Documentation</a>, the <code>StackTraceElement</code> class is described as an element in a stack trace representing a single stack frame. That is, each element returned by <code>Thread.currentThread().getStackTrace()</code> is a stack frame where the element printed at the top represents the execution point where the stack trace was generated.<br> Now, let's launch the application and print a stack trace using a for loop we mentioned before.</p>
+  <pre><code>import java.util.Scanner;
+
+public class NumberFormatExceptionDemo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+
+        demo(input);
+    }
+
+    public static void demo(String input) {
+        for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
+            System.out.println(element);
+        }
+
+        int number = Integer.parseInt(input); // an exception is possible here!
+        System.out.println(number + 1);
+    }
+}</code></pre>
+  <p>If we input a number and the application does not throw an exception, the stack trace message will print the following three lines.</p>
+  <pre><code>java.base/java.lang.Thread.getStackTrace(Thread.java:1610)
+NumberFormatExceptionDemo.demo(NumberFormatExceptionDemo.java:13)
+NumberFormatExceptionDemo.main(NumberFormatExceptionDemo.java:8)</code></pre>
+  <p>The most useful feature of the <code>StackTraceElement</code> class is that it provides methods to simplify these lines and get only the necessary information. If you print <code>System.out.println(element.getClassName())</code> inside the mentioned loop, you will get the stack trace message in this form:</p>
+  <pre><code>java.lang.Thread
+NumberFormatExceptionDemo
+NumberFormatExceptionDemo</code></pre>
+  <p>Other methods of the class, such as <code>getMethodName()</code> or <code>getLineNumber()</code>, work in a similar way. We will not discuss them in detail here, but we recommend you study all the methods on your own.</p>
+  <h4>Conclusion</h4>
+  <p>In this topic, you learned about Stack trace, a Java language feature that helps you understand the steps of the program execution, and, if necessary, quickly analyze why the application threw an error. At first glance, a stack trace message may seem complex and confusing, but once you get a solid grasp of it, it turns into a useful tool for debugging applications.</p>
+ </body>
+</html>

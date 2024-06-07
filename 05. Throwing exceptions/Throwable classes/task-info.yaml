@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: java.lang.Long
+    is_correct: false
+  - text: java.lang.Object
+    is_correct: false
+  - text: java.lang.Exception
+    is_correct: true
+  - text: java.lang.Throwable
+    is_correct: true
+  - text: java.io.IOException
+    is_correct: true
+  - text: java.lang.RuntimeException
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:09:45 UTC"
+record: -1
+selected_options:
+  - 2
+  - 3
+  - 4
+  - 5
+custom_name: Throwable classes
+local_check: true

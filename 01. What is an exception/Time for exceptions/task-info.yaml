@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: at compile time
+    is_correct: false
+  - text: at coding time
+    is_correct: false
+  - text: at any time
+    is_correct: false
+  - text: at runtime
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 31 May 2024 21:16:35 UTC"
+record: -1
+selected_options:
+  - 3
+custom_name: Time for exceptions
+local_check: true

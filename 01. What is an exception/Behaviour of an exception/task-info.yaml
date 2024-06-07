@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "The program is executed completely, ignoring the line with an exception"
+    is_correct: false
+  - text: The program does not compile
+    is_correct: false
+  - text: The program compiles but crashes right after the start
+    is_correct: false
+  - text: "The program is executed up to the line with an exception, then fails"
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 31 May 2024 21:14:26 UTC"
+record: -1
+selected_options:
+  - 3
+custom_name: Behaviour of an exception
+local_check: true

@@ -1,0 +1,28 @@
+<html>
+ <head></head>
+ <body>
+  <p>Look at the following code:</p>
+  <pre><code>BufferedWriter bufferedWriter = null;
+try {
+    bufferedWriter = new BufferedWriter(new FileWriter("veryImportantFile.txt"));
+    bufferedWriter.write("It's okay");
+} finally {
+    if (bufferedWriter != null)
+        bufferedWriter.close();
+}</code></pre>
+  <p>Imagine you want to replace this example with a similar one using <strong>try-with-resources</strong>. Select the letter that corresponds to the correct code snippet.</p>
+  <p>a)</p>
+  <pre><code>try() {
+    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("veryImportantFile.txt"))
+    bufferedWriter.write("It's okay");
+}</code></pre>
+  <p>b)</p>
+  <pre><code>try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("veryImportantFile.txt"))) {
+    bufferedWriter.write("It's okay");
+}</code></pre>
+  <p>c)</p>
+  <pre><code>BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("veryImportantFile.txt"));
+try (bufferedWriter.write("It's okay")) {
+}</code></pre>
+ </body>
+</html>

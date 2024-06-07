@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: You forgot to close the parentheses
+    is_correct: false
+  - text: You forgot to write a semicolon
+    is_correct: false
+  - text: Converting an unsuitable string into an integer number
+    is_correct: true
+  - text: Impossible arithmetic operation
+    is_correct: true
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 31 May 2024 21:16:18 UTC"
+record: -1
+selected_options:
+  - 2
+  - 3
+custom_name: Exceptions' situations
+local_check: true

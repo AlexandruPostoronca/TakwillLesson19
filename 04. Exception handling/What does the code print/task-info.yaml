@@ -1,0 +1,28 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: A
+    is_correct: false
+  - text: B
+    is_correct: false
+  - text: AB
+    is_correct: false
+  - text: AC
+    is_correct: false
+  - text: C
+    is_correct: false
+  - text: BC
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:10:26 UTC"
+record: -1
+selected_options:
+  - 5
+custom_name: What does the code print
+local_check: true

@@ -1,0 +1,28 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: 1
+    is_correct: false
+  - text: 2
+    is_correct: false
+  - text: 3
+    is_correct: false
+  - text: 4
+    is_correct: false
+  - text: 5
+    is_correct: false
+  - text: No exception is thrown
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:15:43 UTC"
+record: -1
+selected_options:
+  - 5
+custom_name: Find NPE
+local_check: true

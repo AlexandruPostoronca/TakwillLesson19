@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: int number = Integer.parseInt(input);
+    is_correct: true
+  - text: int divResult = 22 / number;
+    is_correct: true
+  - text: int multResult = 0 * number;
+    is_correct: false
+  - text: System.out.println(multResult);
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 31 May 2024 21:24:19 UTC"
+record: -1
+selected_options:
+  - 0
+  - 1
+custom_name: Check the code
+local_check: true

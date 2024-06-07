@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: IOException
+    is_correct: false
+  - text: Exception
+    is_correct: false
+  - text: Throwable
+    is_correct: true
+  - text: NullPointerException
+    is_correct: false
+  - text: RuntimeException
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:12:34 UTC"
+record: -1
+selected_options:
+  - 2
+custom_name: What exceptions can be handled
+local_check: true

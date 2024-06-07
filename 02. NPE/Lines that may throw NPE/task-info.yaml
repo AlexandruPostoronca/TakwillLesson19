@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: "Objects.equals(city, capital)"
+    is_correct: false
+  - text: city.equals("Sydney")
+    is_correct: true
+  - text: "Objects.equals(city, \"Melbourne\")"
+    is_correct: false
+  - text: "if (city != null) { System.out.println(city.substring(0, 2)); }"
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Fri, 31 May 2024 21:27:54 UTC"
+record: -1
+selected_options:
+  - 1
+custom_name: Lines that may throw NPE
+local_check: true

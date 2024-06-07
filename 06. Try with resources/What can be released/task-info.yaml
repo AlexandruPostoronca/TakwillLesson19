@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: database connections
+    is_correct: false
+  - text: web connections
+    is_correct: false
+  - text: any outer sources
+    is_correct: true
+  - text: files
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 18:45:13 UTC"
+record: -1
+selected_options:
+  - 2
+custom_name: What can be released?
+local_check: true

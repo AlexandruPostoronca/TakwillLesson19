@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: RuntimeException
+    is_correct: false
+  - text: Error
+    is_correct: false
+  - text: NullPointerException
+    is_correct: false
+  - text: Exception
+    is_correct: false
+  - text: Throwable
+    is_correct: true
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:14:21 UTC"
+record: -1
+selected_options:
+  - 4
+custom_name: The base class
+local_check: true

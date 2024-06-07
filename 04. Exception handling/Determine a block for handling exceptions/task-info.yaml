@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+  - text: In a method that has sufficient information to make the correct decision
+    is_correct: true
+  - text: In a calling method of the method where the exception has occured
+    is_correct: false
+  - text: It must be thrown outside the program
+    is_correct: false
+  - text: In a method where the exception has occurred
+    is_correct: false
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:10:40 UTC"
+record: -1
+selected_options:
+  - 0
+custom_name: Determine a block for handling exceptions
+local_check: true

@@ -1,0 +1,26 @@
+type: marketplace
+title: 19. Exceptions
+language: English
+summary: |
+  This is an introductory course about Exceptions in Java.
+  - 01. What is an exception
+  - 02. NPE
+  - 03. Hierarchy of exceptions
+  - 04. Exception handling
+  - 05. Throwing exceptions
+  - 06. Try with resources
+  - 07. Stack trace
+programming_language: Java
+content:
+  - 01. What is an exception
+  - 02. NPE
+  - 03. Hierarchy of exceptions
+  - 04. Exception handling
+  - 05. Throwing exceptions
+  - 06. Try with resources
+  - 07. Stack trace
+mode: Study
+environment_settings:
+  jvm_language_level: JDK_22
+vendor:
+  name: Alexandru Umanet

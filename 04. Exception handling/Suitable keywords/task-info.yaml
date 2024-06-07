@@ -1,0 +1,31 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: try
+    is_correct: true
+  - text: thrown
+    is_correct: false
+  - text: raise
+    is_correct: false
+  - text: finally
+    is_correct: true
+  - text: catch
+    is_correct: true
+  - text: except
+    is_correct: false
+quiz_header: 'Select all the correct answers:'
+files:
+  - name: src/Main.java
+    visible: true
+    learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 05 Jun 2024 19:10:15 UTC"
+record: -1
+selected_options:
+  - 0
+  - 3
+  - 4
+custom_name: Suitable keywords
+local_check: true

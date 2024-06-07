@@ -1,0 +1,43 @@
+<html>
+ <head></head>
+ <body>
+  <p>Choose only <strong>try-with-resources</strong> code:</p>
+  <p>a)</p>
+  <pre><code>Reader reader = null;
+
+try {
+    reader = new FileReader("file.txt");
+    // some code
+} finally {
+    reader.close();
+}</code></pre>
+  <p>b)</p>
+  <pre><code>try (Reader reader1 = new FileReader("file1.txt"),
+     Reader reader2 = new FileReader("file2.txt"),
+     Reader reader3 = new FileReader("file3.txt")) {
+    // some code
+}</code></pre>
+  <p>c)</p>
+  <pre><code>Scanner scanner = null;
+try {
+    scanner = new Scanner(new File("test.txt"));
+    // some code
+} catch (FileNotFoundException e) {
+    e.printStackTrace();
+} finally {
+    if (scanner != null) {
+        scanner.close();
+    }
+}</code></pre>
+  <p>d)</p>
+  <pre><code>Reader reader = new FileReader("file.txt");
+try (reader) {
+    // some code
+}</code></pre>
+  <p>e)</p>
+  <pre><code>try (Scanner scanner1 = new Scanner(new File("test1.txt"));
+     Scanner scanner2 = new Scanner(new File("test2.txt"))) {
+        // some code
+}</code></pre>
+ </body>
+</html>
